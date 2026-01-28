@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ninja Arashi: Web Shadow</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app-wrapper">
+        
+        <div id="game-container"></div>
+
+        <div id="ui-overlay">
+            <div class="top-hud">
+                <div class="stats">
+                    <div class="health-wrap">
+                        <div id="health-bar"></div>
+                    </div>
+                    <div class="stage-info">
+                        <span class="jp-text">影の道</span>
+                        <span class="en-text">SHADOW PATH</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-controls">
+                <div class="dpad">
+                    <button id="btn-left" class="control-btn shadow-btn">
+                        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                    </button>
+                    <button id="btn-right" class="control-btn shadow-btn">
+                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                    </button>
+                </div>
+
+                <div class="actions">
+                    <button id="btn-dash" class="control-btn action-btn dash-icon">
+                        <span class="label">DASH</span>
+                    </button>
+                    <button id="btn-jump" class="control-btn action-btn jump-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="msg-screen" class="hidden">
+                <h1 id="msg-title">MISSION FAILED</h1>
+                <button onclick="location.reload()" class="retry-btn">RETRY</button>
+            </div>
+        </div>
+
+        <div class="vignette"></div>
+        <div class="scanlines"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
